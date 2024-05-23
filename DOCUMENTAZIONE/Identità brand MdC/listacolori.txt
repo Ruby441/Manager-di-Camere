@@ -1,0 +1,12 @@
+#163344
+#37b1c8
+#1a7280
+#4eaab4
+#8abf32
+
+- Checkin: #009688 (Verde scuro)
+- Pagamento/Checkout: #FF9800 (Arancione)
+- Prenotazione:  #37b1c8 (Azzurro MMDC)
+- Lista camere: #2196F3 (Blu)
+- Info pulizia: #8BC34A (Verde chiaro)
+- Sfondo: #b5e2e8 (Azzurrino MMDC)

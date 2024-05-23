@@ -1,0 +1,9 @@
+.button {
+    -fx-background-color: #333333; /* Sfondo grigio scuro */
+    -fx-text-fill: #ffffff; /* Colore del testo in bianco */
+    -fx-background-radius: 0; /* Imposta il raggio degli angoli a 0 per renderli retti */
+}
+
+.button:hover {
+    -fx-background-color: #dddddd; /* Cambia il colore di sfondo a grigio chiaro al passaggio del mouse */
+}

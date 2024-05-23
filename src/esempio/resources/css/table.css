@@ -1,0 +1,39 @@
+.table-view {
+    -fx-background-color: #f0f0f0; /* Colore di sfondo della TableView */
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #4CAF50; /* Colore di sfondo dell'intestazione della colonna */
+}
+
+.table-view .column-header {
+    -fx-text-fill: white; /* Colore del testo nell'intestazione della colonna */
+}
+
+.table-row-cell {
+    -fx-background-color: #ffffff; /* Colore di sfondo di ogni riga */
+    -fx-table-cell-border-color: #e0e0e0; /* Colore del bordo delle celle */
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f9f9f9; /* Colore di sfondo di ogni riga dispari */
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #4CAF50; /* Colore di sfondo quando una riga è selezionata */
+    -fx-text-fill: white; /* Colore del testo quando una riga è selezionata */
+}
+
+/* Colore testo colonne */
+.table-view .column-header .label {
+    -fx-text-fill: white;
+}
+
+/* Bordi e spaziatura per migliorare la visibilità dell'header */
+.table-view .column-header {
+    -fx-padding: 5 10 5 10; /* Modifica la spaziatura */
+    -fx-border-color: #4eaab4; /* Colore del bordo */
+    -fx-border-width: 0 2 2 2; /* Modifica lo spessore del bordo (2 pixel al di sotto) */
+    -fx-background-color: #8abf32;
+}
+

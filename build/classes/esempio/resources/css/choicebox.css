@@ -1,0 +1,12 @@
+.choice-box {
+    -fx-background-color: #f0f0f0; /* Colore di sfondo */
+    -fx-border-color: #a0a0a0; /* Colore del bordo */
+    -fx-border-width: 0px; /* Spessore del bordo */
+    -fx-border-radius: 0px; /* Raggio degli angoli del bordo */
+    -fx-padding: 5px; /* Spazio interno */
+    -fx-font-size: 17px; /* Dimensione del testo */
+}
+
+.choice-box .arrow-button:hover {
+    -fx-background-color: #e0e0e0; /* Cambia colore del pulsante quando passi sopra */
+}

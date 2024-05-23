@@ -1,0 +1,44 @@
+.menu-button .arrow {
+    -fx-background-color: transparent; /* Imposta il colore di sfondo della freccetta su trasparente */
+    -fx-shape: ""; /* Imposta la forma della freccetta a nulla */
+}
+
+.menu-button {
+    -fx-background-color: #333333; /* Sfondo grigio scuro */
+    -fx-border-color: #333333; /* Colore bordo grigio scuro (opzionale) */
+}
+
+.menu-button:hover {
+    -fx-background-color: #dddddd; /* Cambia il colore di sfondo a grigio chiaro al passaggio del mouse */
+}
+
+.menu-button .text {
+    -fx-text-fill: #ffffff;/* Colore del testo in bianco */
+}
+
+.split-pane *.split-pane-divider {
+    -fx-padding: 0 0 0 0;
+}
+
+.menu-item {
+    	-fx-font-size: 19px; /* Imposta la dimensione del testo */
+	-fx-background-color: #333333; /* Sfondo grigio scuro */
+    	-fx-border-color: #333333; /* Colore bordo grigio scuro (opzionale) */
+}
+
+.menu-item .label{
+    -fx-text-fill: #ffffff;/* Colore del testo */
+}
+
+.menu-item:hover {
+	-fx-text-fill: #ffffff;/* Colore del testo */
+    	-fx-background-color: #dddddd; /* Cambia il colore di sfondo al passaggio del mouse */
+}
+
+.context-menu {
+    -fx-background-color: #333333;     
+    -fx-border-color:  #333333;        
+}
+.button {
+    -fx-background-radius: 0; /* Imposta il raggio degli angoli a 0 per renderli retti */
+}

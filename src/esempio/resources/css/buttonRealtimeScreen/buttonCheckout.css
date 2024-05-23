@@ -1,0 +1,20 @@
+.button {
+    -fx-background-color: #FF9800;
+    -fx-text-fill: white; 
+    -fx-padding: 10px 20px; 
+    -fx-background-radius: 5px;
+    -fx-font-size:19px; 
+    -fx-font-family: 'Maven Pro', sans-serif; 
+    -fx-font-weight: bold;
+}
+
+.button:hover {
+    -fx-background-color: #0056b3; /* Cambia il colore di sfondo al passaggio del mouse */
+}
+
+.label {
+    -fx-font-family: 'Maven Pro', sans-serif; /* Font Maven Pro */
+    -fx-font-size:40px; 
+    -fx-font-weight: bolder;/* Grassetto */
+    -fx-text-fill: darkblue; /* Colore del testo darkblue */
+}

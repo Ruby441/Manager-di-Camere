@@ -1,0 +1,11 @@
+accounts.csv
+user, passwordHash, privilegio
+---
+camere.csv
+numCamera, pianoCamera, TipoCamera, NumLetti, Pulizia
+---
+prenotazioni.csv
+numCamera, dataInizio, dataFine, IDcliente, numAdulti, numBambini, Tariffa, Totale
+---
+checkin.csv
+IDcliente, DataInizio, dataFine, totpersone, Nome, Cognome

@@ -1,0 +1,1310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="656.0" prefWidth="1394.0" style="-fx-background-color: #c7f2ff;" xmlns="http://javafx.com/javafx/8.0.381" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esempio.MainController">
+   <children>
+      <SplitPane dividerPositions="0.5, 0.5, 0.5, 0.5" prefHeight="48.0" prefWidth="1197.0" style="-fx-background-color: #333333;" stylesheets="@resources/css/css.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="197.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <MenuButton fx:id="receptionMenuButton" mnemonicParsing="false" prefHeight="46.0" prefWidth="179.0" stylesheets="@resources/css/css.css" text="Reception" textFill="WHITE">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#apriTimelinePane" text="Timeline prenotazioni">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/icon/3507754_iconoteka_time_timeline_icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#apriPrenotaPane" text="Prenota camera">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/icon/reserved.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#apriListaPrenotazioniPane" text="Elenco prenotazioni">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/icon/reservation.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#apriListaCheckinArrivo" text="Check-in">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/icon/checkInArriving.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#apriListaStoricoCheckIn" text="Storico Check-in">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/icon/storicoCheckIn%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+               </items>
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/icon/2315964_accomodation_hotel_reception_vacation_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </MenuButton>
+            <Button fx:id="realtimeMenuButton" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#apriTodayRealTime" prefWidth="179.0" stylesheets="@resources/css/buttonLikeMenuButton.css" text="Realtime">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/icon/8665445_hotel_service_travel_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <MenuButton fx:id="camereMenuButton" mnemonicParsing="false" prefHeight="46.0" prefWidth="179.0" stylesheets="@resources/css/css.css" text="Camere" textFill="WHITE">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#apriListaCamerePane" text="Lista camere">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/icon/9025639_list_bullets_icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#apriAggiungiListaCamerePane" text="Aggiungi/modifica camera">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/icon/addIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+               </items>
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/icon/3671797_hotel_location_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </MenuButton>
+            <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#apriCleaningPane" prefWidth="179.0" stylesheets="@resources/css/buttonLikeMenuButton.css" text="Pulizia">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/icon/3792033_broom_halloween_magic_witch_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <MenuButton fx:id="pagamentiMenuButton" mnemonicParsing="false" prefHeight="46.0" prefWidth="193.0" stylesheets="@resources/css/css.css" text="Pagamenti" textFill="WHITE">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Effettua Check-out">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/icon/checkOut.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+               </items>
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/icon/2205221_bill_buy_cash_money_pay_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </MenuButton>
+         </items>
+      </SplitPane>
+      <MenuButton fx:id="usernameLabel" contentDisplay="RIGHT" layoutX="1202.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="192.0" style="-fx-background-radius: 0;" stylesheets="@resources/css/css.css" text="Nome Ut." textFill="WHITE" AnchorPane.rightAnchor="0.0">
+         <items>
+            <MenuItem mnemonicParsing="false" onAction="#esciDaUtente" text="Esci">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/icon/esciAccount.png" />
+                     </image>
+                  </ImageView>
+               </graphic></MenuItem>
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#setFullScreen" text="Full screen">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/icon/fullscreen.png" />
+                     </image>
+                  </ImageView>
+               </graphic></MenuItem>
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#apriAiutoPane" text="Aiuto">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/icon/help.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </MenuItem>
+         </items>
+         <font>
+            <Font size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/icon/1564535_customer_user_userphoto_account_person_icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </MenuButton>
+      <AnchorPane fx:id="homePane" layoutX="6.0" layoutY="48.0" prefHeight="592.0" prefWidth="1382.0" visible="false" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="48.0">
+         <children>
+            <SplitPane dividerPositions="0.25, 0.5, 0.75" layoutX="95.0" layoutY="82.0" prefHeight="135.0" prefWidth="1370.0" style="-fx-background-color: null;" stylesheets="@resources/css/hideSplitPaneDivider.css" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="7.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="158.0" prefWidth="261.0">
+                     <children>
+                        <AnchorPane layoutX="10.0" layoutY="18.0" prefHeight="108.0" prefWidth="200.0" style="-fx-background-color: #3065d9; -fx-background-radius: 20;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="5.0">
+                           <children>
+                              <Label layoutX="17.0" layoutY="18.0" text="Introiti giornalieri" textFill="WHITE" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="59.0" AnchorPane.topAnchor="17.0">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="28.0" layoutY="55.0" text="0" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="55.0">
+                                 <font>
+                                    <Font name="System Bold" size="35.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="46.0" fitWidth="39.0" layoutX="253.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="16.0">
+                                 <image>
+                                    <Image url="@resources/icon/172506_money_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="158.0" prefWidth="392.0">
+                     <children>
+                        <AnchorPane layoutX="33.0" layoutY="11.0" prefHeight="108.0" prefWidth="200.0" style="-fx-background-color: #e6bb12; -fx-background-radius: 20;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="5.0">
+                           <children>
+                              <Label layoutX="46.0" layoutY="17.0" text="Introiti per stanza" textFill="WHITE" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="59.0" AnchorPane.topAnchor="17.0">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="31.0" layoutY="49.0" text="0" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="55.0">
+                                 <font>
+                                    <Font name="System Bold" size="35.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="46.0" fitWidth="39.0" layoutX="250.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="16.0">
+                                 <image>
+                                    <Image url="@resources/icon/1737376_dollar_money_sign_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <AnchorPane layoutX="84.0" layoutY="10.0" prefHeight="108.0" prefWidth="200.0" style="-fx-background-color: #40c943; -fx-background-radius: 20;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="5.0">
+                           <children>
+                              <Label layoutX="1.0" layoutY="35.0" text="Tasso d'occupazione" textFill="WHITE" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="59.0" AnchorPane.topAnchor="17.0">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="realtimeRatioOccupazione" layoutX="23.0" layoutY="66.0" text="0" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="55.0">
+                                 <font>
+                                    <Font name="System Bold" size="35.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="46.0" fitWidth="39.0" layoutX="258.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="16.0">
+                                 <image>
+                                    <Image url="@resources/icon/8542202_percent_sign_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <AnchorPane layoutX="-36.0" layoutY="-8.0" prefHeight="108.0" prefWidth="200.0" style="-fx-background-color: #d12c2c; -fx-background-radius: 20;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0">
+                           <children>
+                              <Label layoutX="-1.0" layoutY="26.0" text="Clienti e camere" textFill="WHITE" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="59.0" AnchorPane.topAnchor="17.0">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="realtimeNumTotalePersone" layoutX="70.0" layoutY="55.0" text="0" textFill="WHITE" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="55.0">
+                                 <font>
+                                    <Font name="System Bold" size="35.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="46.0" fitWidth="39.0" layoutX="25.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="23.088634490966797" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="238.0" AnchorPane.topAnchor="61.0">
+                                 <image>
+                                    <Image url="@resources/icon/8674917_ic_fluent_guest_regular_icon.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="46.0" fitWidth="39.0" layoutX="134.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="134.0" AnchorPane.rightAnchor="129.0" AnchorPane.topAnchor="61.0">
+                                 <image>
+                                    <Image url="@resources/icon/5614375_bed_bedroom_furniture_hotel_sleep_icon.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="realtimeNumCamereOccupate" layoutX="180.0" layoutY="55.0" text="0" textFill="WHITE" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="55.0">
+                                 <font>
+                                    <Font name="System Bold" size="35.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="46.0" fitWidth="39.0" layoutX="250.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="16.0">
+                                 <image>
+                                    <Image url="@resources/icon/326568_check_circle_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+            <SplitPane dividerPositions="0.3, 0.7" layoutX="22.0" layoutY="163.0" prefHeight="275.0" prefWidth="1336.0" style="-fx-background-color: null;" stylesheets="@resources/css/hideSplitPaneDivider.css" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="163.0">
+              <items>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="124.0" layoutY="16.0" prefHeight="266.0" prefWidth="312.0" style="-fx-background-color: #909191; -fx-background-radius: 20;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="5.0">
+                           <children>
+                              <Label layoutX="25.0" layoutY="10.0" prefHeight="51.0" prefWidth="228.0" text="Collegamenti rapidi" textFill="WHITE" AnchorPane.bottomAnchor="205.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="59.0" AnchorPane.topAnchor="10.0">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="46.0" fitWidth="39.0" layoutX="321.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="15.0">
+                                 <image>
+                                    <Image url="@resources/icon/rapidLinks.png" />
+                                 </image>
+                              </ImageView>
+                              <Button layoutX="67.0" layoutY="79.0" mnemonicParsing="false" onAction="#apriListaCheckinArrivo" prefHeight="51.0" prefWidth="179.0" stylesheets="@resources/css/buttonRealtimeScreen/buttonCheckIn.css" text="CHECK-IN" AnchorPane.bottomAnchor="136.0" AnchorPane.leftAnchor="67.0" AnchorPane.rightAnchor="66.0" AnchorPane.topAnchor="79.0" />
+                              <Button layoutX="67.0" layoutY="139.0" mnemonicParsing="false" onAction="#apriPrenotaPane" prefHeight="46.0" prefWidth="179.0" stylesheets="@resources/css/buttonRealtimeScreen/buttonPrenotaStanza.css" text="PRENOTA STANZA" AnchorPane.leftAnchor="67.0" AnchorPane.rightAnchor="66.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="-145.0" layoutY="-29.0" prefHeight="266.0" prefWidth="465.0" style="-fx-background-color: #909191; -fx-background-radius: 20;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="5.0">
+                           <children>
+                              <Label layoutX="25.0" layoutY="10.0" prefHeight="51.0" prefWidth="381.0" text="Situazione camere" textFill="WHITE" AnchorPane.bottomAnchor="205.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="59.0" AnchorPane.topAnchor="10.0">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="46.0" fitWidth="39.0" layoutX="253.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="16.0">
+                                 <image>
+                                    <Image url="@resources/icon/StatusIcon.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="25.0" layoutY="86.0" prefHeight="51.0" prefWidth="111.0" text="LIBERE" textFill="WHITE">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="25.0" layoutY="137.0" prefHeight="51.0" prefWidth="132.0" text="OCCUPATE" textFill="WHITE">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="245.0" layoutY="86.0" prefHeight="51.0" prefWidth="111.0" text="PULITE" textFill="WHITE">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="245.0" layoutY="137.0" prefHeight="51.0" prefWidth="132.0" text="DA PULIRE" textFill="WHITE">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="realtimeNumCamereLibere" layoutX="168.0" layoutY="86.0" prefHeight="51.0" prefWidth="48.0" text="0" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="realtimeNumCamereOccupate2" layoutX="168.0" layoutY="137.0" prefHeight="51.0" prefWidth="48.0" text="0" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="stanzePuliteLbl2" layoutX="382.0" layoutY="86.0" prefHeight="51.0" prefWidth="48.0" text="0" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="stanzeDaPulireLbl2" layoutX="382.0" layoutY="137.0" prefHeight="51.0" prefWidth="48.0" text="0" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="132.0" layoutY="9.0" prefHeight="266.0" prefWidth="302.0" style="-fx-background-color: #909191; -fx-background-radius: 20;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="5.0">
+                           <children>
+                              <Label layoutX="25.0" layoutY="10.0" prefHeight="51.0" prefWidth="228.0" text="Accade oggi" textFill="WHITE" AnchorPane.bottomAnchor="205.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="59.0" AnchorPane.topAnchor="10.0">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="46.0" fitWidth="39.0" layoutX="253.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="16.0">
+                                 <image>
+                                    <Image url="@resources/icon/todayIcon.png" />
+                                 </image>
+                              </ImageView>
+                              <Button layoutX="34.0" layoutY="81.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="179.0" stylesheets="@resources/css/buttonRealtimeScreen/buttonPrenotaStanza.css" text="PRENOTAZ. PER OGGI" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="89.0" AnchorPane.topAnchor="81.0" />
+                              <Button layoutX="34.0" layoutY="141.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="179.0" stylesheets="@resources/css/buttonRealtimeScreen/buttonPrenotaStanza.css" text="CLIENTI IN ARRIVO" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="89.0" AnchorPane.topAnchor="141.0" />
+                              <Button layoutX="34.0" layoutY="198.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="179.0" stylesheets="@resources/css/buttonRealtimeScreen/buttonCheckout.css" text="CHECK-OUT OGGI" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="89.0" AnchorPane.topAnchor="201.0" />
+                              <Label fx:id="realtimeNumPrenotazioniPerOggi" layoutX="243.0" layoutY="79.0" text="0" textFill="WHITE" AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="79.0">
+                                 <font>
+                                    <Font name="System Bold" size="35.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="realtimeNumClientiInArrivo" layoutX="243.0" layoutY="139.0" text="0" textFill="WHITE" AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="139.0">
+                                 <font>
+                                    <Font name="System Bold" size="35.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="realtimeNumCheckOutOggi" layoutX="243.0" layoutY="199.0" text="0" textFill="WHITE" AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="199.0">
+                                 <font>
+                                    <Font name="System Bold" size="35.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="prenotaPane" layoutX="14.0" layoutY="55.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="48.0">
+         <children>
+            <ImageView fitHeight="75.0" fitWidth="78.0" layoutX="38.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/icon/reservationIcon.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="124.0" layoutY="24.0" text="Prenotazione camera">
+               <font>
+                  <Font name="System Bold Italic" size="39.0" />
+               </font>
+            </Label>
+            <Line endX="1281.5" layoutX="104.0" layoutY="104.0" startX="-100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <SplitPane dividerPositions="0.5" layoutX="50.0" layoutY="399.0" orientation="VERTICAL" prefHeight="123.0" prefWidth="419.0" style="-fx-background-radius: 15; -fx-background-color: #009688;" stylesheets="@resources/css/hideSplitPaneDivider.css">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Tipo di stanza">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="tipoStanzaPrenotazione" layoutX="253.0" layoutY="7.0" onAction="#datiPrenotazioneAggiornati" prefHeight="30.0" prefWidth="150.0" stylesheets="@resources/css/choicebox.css" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="13.0" text="Seleziona stanza">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="selezioneStanzaPrenotazione" layoutX="253.0" layoutY="6.0" prefHeight="39.0" prefWidth="150.0" stylesheets="@resources/css/choicebox.css" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+            <SplitPane dividerPositions="0.5113636363636364" layoutX="50.0" layoutY="138.0" orientation="VERTICAL" prefHeight="171.0" prefWidth="419.0" style="-fx-background-color: #37b1c8; -fx-background-radius: 15;" stylesheets="@resources/css/hideSplitPaneDivider.css">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="28.0" text="Data di check-in*">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="dataInizioPrenotazione" editable="false" layoutX="238.0" layoutY="28.0" onAction="#datiPrenotazioneAggiornati" prefHeight="34.0" prefWidth="165.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="25.0" text="Data di check-out*">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="dataFinePrenotazione" editable="false" layoutX="238.0" layoutY="25.0" onAction="#datiPrenotazioneAggiornati" prefHeight="34.0" prefWidth="165.0" />
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+            <SplitPane dividerPositions="0.0, 0.5" layoutX="537.0" layoutY="138.0" orientation="VERTICAL" prefHeight="171.0" prefWidth="433.0" style="-fx-background-color: #37b1c8; -fx-background-radius: 15;" stylesheets="@resources/css/hideSplitPaneDivider.css">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="26.0" text="Numero di adulti (18+)*">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="numAdultiPrenotazione" layoutX="315.0" layoutY="24.0" onKeyReleased="#datiPrenotazioneAggiornati" onKeyTyped="#onlyNumberTextbox" prefHeight="34.0" prefWidth="82.0" promptText="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font></TextField>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="50.0" prefWidth="158.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="29.0" text="Numero di bambini">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="numBambiniPrenotazione" layoutX="314.0" layoutY="23.0" onKeyReleased="#datiPrenotazioneAggiornati" onKeyTyped="#onlyNumberTextbox" prefHeight="34.0" prefWidth="82.0" promptText="0">
+                           <font>
+                              <Font size="18.0" />
+                           </font></TextField>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+            <Label layoutX="50.0" layoutY="350.0" text="Informazioni aggiuntive">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <SplitPane dividerPositions="0.5" layoutX="537.0" layoutY="399.0" orientation="VERTICAL" prefHeight="123.0" prefWidth="419.0" style="-fx-background-radius: 15; -fx-background-color: #FF9800;" stylesheets="@resources/css/hideSplitPaneDivider.css">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Tariffa">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="selezioneTariffaPrenotazione" layoutX="253.0" layoutY="7.0" prefHeight="39.0" prefWidth="150.0" stylesheets="@resources/css/choicebox.css" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="13.0" text="Totale">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="totalePrenotazione" layoutX="256.0" layoutY="13.0" prefHeight="34.0" prefWidth="121.0" />
+                        <Label layoutX="390.0" layoutY="13.0" text="€">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+            <Label layoutX="838.0" layoutY="309.0" prefHeight="26.0" prefWidth="132.0" text="*Valori obbligatori">
+               <font>
+                  <Font name="System Italic" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="212.0" layoutY="522.0" text="Valori selezionabili in fase di checkin">
+               <font>
+                  <Font name="System Italic" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="739.0" layoutY="522.0" text="Valori selezionabili al checkout">
+               <font>
+                  <Font name="System Italic" size="16.0" />
+               </font>
+            </Label>
+            <SplitPane dividerPositions="0.5" layoutX="1181.0" layoutY="9.0" prefHeight="85.0" prefWidth="182.0" style="-fx-background-color: null;" stylesheets="@resources/css/hideSplitPaneDivider.css" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="9.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" stylesheets="@resources/css/hideSplitPaneDivider.css">
+                     <children>
+                        <Button layoutX="44.0" layoutY="51.0" mnemonicParsing="false" onAction="#cancellaDatiPrenotazione" onMouseEntered="#binDragOver" onMouseExited="#binDragOff" prefHeight="75.0" prefWidth="56.0" style="-fx-background-color: null;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fx:id="binImageBtn" fitHeight="86.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/icon/bin.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <Button layoutX="26.0" layoutY="70.0" mnemonicParsing="false" onAction="#salvaDatiPrenotazione" onMouseEntered="#tickDragOver" onMouseExited="#tickDragOff" prefHeight="75.0" prefWidth="56.0" style="-fx-background-color: null;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fx:id="tickImageBtn" fitHeight="86.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/icon/tick.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+            <SplitPane dividerPositions="0.2" layoutX="543.0" layoutY="9.0" prefHeight="86.0" prefWidth="257.0" style="-fx-background-color: #8abf32; -fx-background-radius: 15;" stylesheets="@resources/css/hideSplitPaneDivider.css">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="84.0" prefWidth="51.0">
+                     <children>
+                        <ImageView fitHeight="57.0" fitWidth="48.0" layoutX="5.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/icon/clock.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="84.0" prefWidth="185.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5113636363636364" layoutX="3.0" orientation="VERTICAL" prefHeight="85.0" prefWidth="175.0" style="-fx-background-color: #8abf32; -fx-background-radius: 15;" stylesheets="@resources/css/hideSplitPaneDivider.css">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <Label fx:id="clockDataPrenotazione" alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="2.0" text="21/03/2024" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="27.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="58.0" prefWidth="376.0">
+                                 <children>
+                                    <Label fx:id="clockOraPrenotazione" alignment="CENTER" layoutX="14.0" layoutY="-2.0" prefHeight="32.0" prefWidth="150.0" text="2222" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="firstPane" layoutX="58.0" layoutY="132.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+         <children>
+            <Text fx:id="benvenutoName" layoutX="108.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Benvenuto in MdC" textAlignment="CENTER" wrappingWidth="1177.29248046875">
+               <font>
+                  <Font name="System Bold" size="61.0" />
+               </font>
+            </Text>
+            <Text layoutX="464.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleziona una voce dal menu per iniziare.">
+               <font>
+                  <Font name="System Italic" size="26.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="275.0" fitWidth="283.0" layoutX="558.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MdC_firstScreen/resources/MDC_nobg.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="275.0" fitWidth="283.0" layoutX="1117.0" layoutY="321.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <image>
+                  <Image url="@MdC_firstScreen/resources/MDC_nobg_borderfill.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="aiutoPane" layoutX="68.0" layoutY="142.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+         <children>
+            <Text layoutX="29.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aiuto" wrappingWidth="228.00002694129944">
+               <font>
+                  <Font name="System Bold" size="61.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="368.0" fitWidth="485.0" layoutX="29.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MdC_firstScreen/resources/MDC_nobg.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="275.0" fitWidth="283.0" layoutX="1117.0" layoutY="321.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <image>
+                  <Image url="@MdC_firstScreen/resources/MDC_nobg_borderfill.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="444.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Il team di MdC vi ringrazia per aver scelto questo Software." textAlignment="CENTER">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Text>
+            <Text layoutX="444.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Siamo dispiaciuti se state avendo difficoltà nel suo utilizzo.">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Text layoutX="444.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nella cartella del Software è disponibile un esaustivo manuale utente.">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Text layoutX="444.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Per domande e segnalazioni siamo a disposizione.">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Text>
+            <Text layoutX="447.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="aiuto@mdc.it">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Text layoutX="447.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(+39) 333 333 3333">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Text layoutX="444.0" layoutY="467.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ponzini Andrea e Rubinacci Antonio, i creatori di MdC.">
+               <font>
+                  <Font name="System Italic" size="21.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="listaCamerePane" layoutX="24.0" layoutY="65.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="48.0">
+         <children>
+            <ImageView fitHeight="75.0" fitWidth="78.0" layoutX="38.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MdC_firstScreen/resources/icon/8679595_hotel_bed_line_icon.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="123.0" layoutY="28.0" text="Lista camere">
+               <font>
+                  <Font name="System Bold Italic" size="39.0" />
+               </font>
+            </Label>
+            <Line endX="1281.5" layoutX="104.0" layoutY="104.0" startX="-100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <SplitPane dividerPositions="0.5" layoutX="38.0" layoutY="123.0" prefHeight="466.0" prefWidth="1332.0" style="-fx-background-color: null;" stylesheets="@resources/css/hideSplitPaneDivider.css" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="123.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <TableView fx:id="elencoCamereTab" layoutX="14.0" layoutY="14.0" prefHeight="377.0" prefWidth="357.0" stylesheets="@resources/css/table.css" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                          <columns>
+                            <TableColumn fx:id="elencoTabNumCamera" prefWidth="75.0" text="Numero" />
+                            <TableColumn fx:id="elencoTabPianoCamera" prefWidth="75.0" text="Piano" />
+                              <TableColumn fx:id="elencoTabTipoCamera" prefWidth="75.0" text="Tipo" />
+                              <TableColumn fx:id="elencoTabNumLetti" prefWidth="75.0" text="Num letti" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <Label fx:id="elencoTotaleCamereLbl" layoutX="358.0" layoutY="440.0" text="Sono presenti in totale NNN camere." AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="14.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="464.0" prefWidth="735.0">
+                     <children>
+                        <Rectangle arcHeight="20.0" arcWidth="20.0" fill="DODGERBLUE" height="418.0" layoutX="98.0" layoutY="23.0" stroke="BLACK" strokeType="INSIDE" width="470.0" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="98.0" AnchorPane.rightAnchor="98.0" AnchorPane.topAnchor="23.0" />
+                        <AnchorPane fx:id="elencoCamere_filtriTab" layoutX="117.0" layoutY="40.0" prefHeight="390.0" prefWidth="433.0" visible="false" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="35.0">
+                           <children>
+                              <TitledPane animated="false" collapsible="false" layoutX="7.0" layoutY="47.0" prefHeight="171.0" prefWidth="433.0" text="Filtri">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="127.0" prefWidth="431.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Numero">
+                                             <font>
+                                                <Font size="19.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="14.0" layoutY="59.0" text="Piano">
+                                             <font>
+                                                <Font size="19.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="216.0" layoutY="14.0" text="Tipo">
+                                             <font>
+                                                <Font size="19.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="216.0" layoutY="59.0" text="Num letti">
+                                             <font>
+                                                <Font size="19.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="filterCameraNumero" layoutX="107.0" layoutY="16.0" prefHeight="25.0" prefWidth="93.0" />
+                                          <TextField fx:id="filterCameraPiano" layoutX="107.0" layoutY="61.0" prefHeight="25.0" prefWidth="93.0" />
+                                          <TextField fx:id="filterCameraNumLetti" layoutX="309.0" layoutY="61.0" prefHeight="25.0" prefWidth="93.0" />
+                                          <ChoiceBox fx:id="filterCameraTipo" layoutX="310.0" layoutY="16.0" prefHeight="25.0" prefWidth="93.0" />
+                                          <Button layoutX="95.0" layoutY="100.0" mnemonicParsing="false" onAction="#loadElencoCameraFilter" text="FILTRA">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="235.0" layoutY="104.0" mnemonicParsing="false" onAction="#svuotaFiltri" text="Cancella tutto" textFill="RED">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </TitledPane>
+                              <Label layoutX="53.0" layoutY="2.0" text="Filtra" textFill="WHITE">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="43.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/icon/3844475_filter_filters_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="elencoCamere_aggiungiTab" layoutX="127.0" layoutY="50.0" prefHeight="390.0" prefWidth="433.0" visible="false" AnchorPane.bottomAnchor="39.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="35.0">
+                           <children>
+                              <TitledPane animated="false" collapsible="false" layoutY="247.0" prefHeight="143.0" prefWidth="433.0" text="Elimina">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="134.0" prefWidth="358.0">
+                                       <children>
+                                          <Label fx:id="deleteRowStr" layoutX="46.0" layoutY="43.0" text="Seleziona una camera dalla tabella.">
+                                             <font>
+                                                <Font size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="deleteRowBtn" layoutX="165.0" layoutY="38.0" mnemonicParsing="false" onAction="#deleteSelectedRow" prefHeight="41.0" prefWidth="101.0" text="ELIMINA" textFill="RED">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font></Button>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <Label layoutX="46.0" layoutY="2.0" text="Aggiungi" textFill="WHITE">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="46.0" layoutY="203.0" text="Elimina" textFill="WHITE">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="43.0" fitWidth="48.0" layoutX="-3.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/icon/editIcon.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="43.0" fitWidth="48.0" layoutX="-5.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/icon/addIcon.png" />
+                                 </image>
+                              </ImageView>
+                              <TitledPane animated="false" collapsible="false" layoutX="5.0" layoutY="49.0" prefHeight="143.0" prefWidth="433.0" text="Aggiungi">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="134.0" prefWidth="358.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="25.0" text="Num. camera">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="13.0" layoutY="52.0" text="Piano camera">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="216.0" layoutY="25.0" text="Tipo">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="212.0" layoutY="52.0" text="Num. letti">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="regNumCamera" layoutX="131.0" layoutY="23.0" onKeyTyped="#onlyNumberTextbox" prefHeight="26.0" prefWidth="69.0" />
+                                          <TextField fx:id="regPianoCamera" layoutX="131.0" layoutY="52.0" onKeyTyped="#onlyNumberTextbox" prefHeight="26.0" prefWidth="69.0" />
+                                          <TextField fx:id="regNumLettiCamera" layoutX="303.0" layoutY="52.0" onKeyTyped="#onlyNumberTextbox" prefHeight="26.0" prefWidth="69.0" />
+                                          <ChoiceBox fx:id="regTipoCamera" layoutX="261.0" layoutY="23.0" prefHeight="26.0" prefWidth="111.0" />
+                                          <Button layoutX="365.0" layoutY="91.0" mnemonicParsing="false" onAction="#addCameraToFile" text="Aggiungi" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="elencoCamere_errorNoAdmin" layoutX="137.0" layoutY="60.0" prefHeight="390.0" prefWidth="433.0" visible="false" AnchorPane.bottomAnchor="39.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="35.0">
+                           <children>
+                              <Label layoutX="223.0" layoutY="32.0" text="Avviso" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="41.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="86.0" fitWidth="89.0" layoutX="93.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/icon/9035016_warning_icon.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fill="WHITE" layoutX="76.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Solo gli utenti Amministratori hanno i permessi per aggiungere e modificare le camere" textAlignment="CENTER" wrappingWidth="293.99998950585723">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font></Text>
+                              <Button layoutX="157.0" layoutY="256.0" mnemonicParsing="false" onAction="#esciDaUtente" prefHeight="44.0" prefWidth="132.0" stylesheets="@resources/css/buttonRealtimeScreen/buttonCheckIn.css" text="LOGOUT" />
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="listaPrenotazioniPane" layoutX="33.0" layoutY="53.0" prefHeight="586.0" prefWidth="1383.0" visible="false" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="53.0">
+         <children>
+            <ImageView fitHeight="75.0" fitWidth="78.0" layoutX="38.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/icon/9025639_list_bullets_icon%20(1).png" />
+               </image>
+            </ImageView>
+            <Label layoutX="122.0" layoutY="24.0" text="Lista prenotazioni">
+               <font>
+                  <Font name="System Bold Italic" size="39.0" />
+               </font>
+            </Label>
+            <Line endX="1281.5" layoutX="104.0" layoutY="104.0" startX="-100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <SplitPane dividerPositions="0.7" layoutX="38.0" layoutY="123.0" prefHeight="466.0" prefWidth="1332.0" style="-fx-background-color: null;" stylesheets="@resources/css/hideSplitPaneDivider.css" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="123.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <TableView fx:id="elencoPrenotazioniTab" layoutX="14.0" layoutY="14.0" prefHeight="377.0" prefWidth="357.0" stylesheets="@resources/css/table.css" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                           <columns>
+                              <TableColumn fx:id="elencoPrenotazioniNumCamera" prefWidth="75.0" text="N. camera" />
+                              <TableColumn fx:id="elencoPrenotazioniDataInizio" prefWidth="75.0" text="Data inizio" />
+                              <TableColumn fx:id="elencoPrenotazioniDataFine" prefWidth="75.0" text="Data fine" />
+                              <TableColumn fx:id="elencoPrenotazioniIDCliente" prefWidth="75.0" text="ID Cliente" />
+                              <TableColumn fx:id="elencoPrenotazioniAdulti" prefWidth="75.0" text="Adulti" />
+                              <TableColumn fx:id="elencoPrenotazioniBambini" prefWidth="75.0" text="Bambini" />
+                              <TableColumn fx:id="elencoPrenotazioniTariffa" prefWidth="75.0" text="Tariffa" />
+                              <TableColumn fx:id="elencoPrenotazioniTotale" prefWidth="75.0" text="Totale" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <Label fx:id="elencoTotalePrenotazioniLbl" layoutX="358.0" layoutY="440.0" text="Sono presenti in totale NNN prenotazioni." AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="14.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="464.0" prefWidth="735.0">
+                     <children>
+                        <Rectangle arcHeight="20.0" arcWidth="20.0" fill="DODGERBLUE" height="418.0" layoutX="5.0" layoutY="12.0" stroke="BLACK" strokeType="INSIDE" width="371.0" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="12.0" />
+                        <Button layoutX="33.0" layoutY="30.0" mnemonicParsing="false" onAction="#loadElencoPrenotazioniFutureTable" prefHeight="43.0" prefWidth="302.0" text="Mostra prenotazioni successive a oggi" />
+                        <Button layoutX="33.0" layoutY="81.0" mnemonicParsing="false" onAction="#loadElencoPrenotazioniTable" prefHeight="43.0" prefWidth="302.0" text="Mostra tutte le prenotazioni" />
+                        <Button layoutX="33.0" layoutY="151.0" mnemonicParsing="false" onAction="#ordinaPerDataInizio" prefHeight="43.0" prefWidth="302.0" text="Ordina per data di inizio" />
+                        <TitledPane animated="false" collapsible="false" layoutX="36.0" layoutY="298.0" prefHeight="108.0" prefWidth="297.0" text="Legenda">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="58.0" prefWidth="295.0">
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="LIGHTBLUE" height="25.0" layoutX="2.0" layoutY="2.0" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+                                    <Label layoutX="35.0" layoutY="6.0" text="Prenotazioni antecedenti a oggi">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="MEDIUMPURPLE" height="25.0" layoutX="2.0" layoutY="29.0" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="PALEGREEN" height="25.0" layoutX="2.0" layoutY="56.0" stroke="BLACK" strokeType="INSIDE" width="25.0" />
+                                    <Label layoutX="35.0" layoutY="31.0" text="Prenotazioni per oggi">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="35.0" layoutY="58.0" text="Prenotazioni future">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="listaCheckInArrivoOggi" layoutX="6.0" layoutY="65.0" prefHeight="586.0" prefWidth="1383.0" visible="false">
+         <children>
+            <ImageView fitHeight="75.0" fitWidth="78.0" layoutX="38.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/icon/checkInInArrivo.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="elencoCheckInLbTitle" layoutX="123.0" layoutY="24.0" text="Check-in in arrivo">
+               <font>
+                  <Font name="System Bold Italic" size="39.0" />
+               </font>
+            </Label>
+            <Line endX="1281.5" layoutX="104.0" layoutY="104.0" startX="-100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <SplitPane dividerPositions="0.7" layoutX="38.0" layoutY="123.0" prefHeight="466.0" prefWidth="1332.0" style="-fx-background-color: null;" stylesheets="@resources/css/hideSplitPaneDivider.css" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="123.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <TableView fx:id="elencoCheckInTab" layoutX="14.0" layoutY="55.0" prefHeight="362.0" prefWidth="897.0" stylesheets="@resources/css/table.css" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="55.0">
+                           <columns>
+                              <TableColumn fx:id="elencoCheckInNumCamera" prefWidth="75.0" text="N. camera" />
+                              <TableColumn fx:id="elencoCheckInDataInizio" prefWidth="75.0" text="Data inizio" />
+                              <TableColumn fx:id="elencoCheckInDataFine" prefWidth="75.0" text="Data fine" />
+                              <TableColumn fx:id="elencoCheckInIDCliente" prefWidth="75.0" text="ID Cliente" />
+                              <TableColumn fx:id="elencoCheckInAdulti" prefWidth="75.0" text="Adulti" />
+                              <TableColumn fx:id="elencoCheckInBambini" prefWidth="75.0" text="Bambini" />
+                              <TableColumn fx:id="elencoCheckInTariffa" prefWidth="75.0" text="Tariffa" />
+                              <TableColumn fx:id="elencoCheckInTotale" prefWidth="75.0" text="Totale" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <Label fx:id="elencoCheckInLb1" layoutX="14.0" layoutY="6.0" text="Sono presenti NNN Check-in in arrivo oggi." AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="6.0">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="buttonRectangle" minHeight="0.0" minWidth="0.0" prefHeight="464.0" prefWidth="735.0">
+                     <children>
+                        <Rectangle arcHeight="20.0" arcWidth="20.0" fill="DODGERBLUE" height="418.0" layoutX="5.0" layoutY="12.0" stroke="BLACK" strokeType="INSIDE" width="371.0" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="12.0" />
+                        <Button layoutX="83.0" layoutY="44.0" mnemonicParsing="false" onAction="#effettuaCheckIn" prefHeight="48.0" prefWidth="231.0" stylesheets="@resources/css/buttonRealtimeScreen/buttonCheckIn.css" text="EFFETTUA CHECK-IN" AnchorPane.leftAnchor="83.0" AnchorPane.rightAnchor="82.0" AnchorPane.topAnchor="44.0" />
+                        <Button layoutX="83.0" layoutY="103.0" mnemonicParsing="false" onAction="#apriListaStoricoCheckIn" prefHeight="48.0" prefWidth="231.0" stylesheets="@resources/css/buttonRealtimeScreen/buttonCheckIn.css" text="STORICO CHECK-IN" />
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="effettuaCheckIn" layoutX="14.0" layoutY="59.0" prefHeight="586.0" prefWidth="1383.0" visible="false" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="59.0">
+         <children>
+            <ImageView fitHeight="75.0" fitWidth="78.0" layoutX="38.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/icon/check-in-desk-black.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="123.0" layoutY="24.0" text="Check-in">
+               <font>
+                  <Font name="System Bold Italic" size="39.0" />
+               </font>
+            </Label>
+            <Line endX="1281.5" layoutX="104.0" layoutY="104.0" startX="-100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <SplitPane layoutX="38.0" layoutY="123.0" prefHeight="466.0" prefWidth="1332.0" style="-fx-background-color: null;" stylesheets="@resources/css/hideSplitPaneDivider.css" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="123.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <AnchorPane layoutX="378.0" layoutY="14.0" prefHeight="171.0" prefWidth="342.0" style="-fx-background-radius: 15; -fx-background-color: #009688;">
+                           <children>
+                              <Label layoutX="15.0" layoutY="11.0" text="Dati aggiuntivi cliente">
+                                 <font>
+                                    <Font name="System Bold" size="27.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="15.0" layoutY="72.0" text="Nome:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="15.0" layoutY="104.0" text="Cognome:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="ckInNome" layoutX="108.0" layoutY="73.0" />
+                              <TextField fx:id="ckInCognome" layoutX="108.0" layoutY="105.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="171.0" prefWidth="342.0" style="-fx-background-radius: 15; -fx-background-color: #37b1c8;">
+                           <children>
+                              <Label layoutX="12.0" layoutY="8.0" text="Prenotazione selezionata">
+                                 <font>
+                                    <Font name="System Bold" size="27.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="ckInIDClienteLb" layoutX="106.0" layoutY="59.0" text="0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="ckInDataInizioLb" layoutX="130.0" layoutY="86.0" text="2024-00-00">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="ckInDataFineLb" layoutX="115.0" layoutY="114.0" text="2024-00-00">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="ckInNumPers" layoutX="157.0" layoutY="141.0" text="3">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="59.0" text="ID Cliente:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="86.0" text="Data di arrivo: ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="114.0" text="Data di fine: ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="12.0" layoutY="141.0" text="Numero persone: ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="16.0" layoutY="204.0" text="Salvando il Check-In, confermi che il cliente è arrivato nella struttura.">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+            <Button layoutX="1255.0" mnemonicParsing="false" onAction="#salvaDatiCheckIn" onMouseEntered="#tickDragOver" onMouseExited="#tickDragOff" prefHeight="75.0" prefWidth="56.0" style="-fx-background-color: null;" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="tickImageBtn2" fitHeight="86.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/icon/tick.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="timelinePane" layoutX="6.0" layoutY="53.0" prefHeight="596.0" prefWidth="1382.0" visible="false" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="53.0">
+         <children>
+            <Label fx:id="monthLabel" layoutX="629.0" layoutY="27.0" text="Month Year">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="previousMonthButton" layoutX="171.0" layoutY="24.0" mnemonicParsing="false" onAction="#timelineMesePrecedente" stylesheets="@resources/css/timeline.css" text="Mese precedente">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <Button fx:id="nextMonthButton" layoutX="1065.0" layoutY="22.0" mnemonicParsing="false" onAction="#timelineMeseSuccessivo" stylesheets="@resources/css/timeline.css" text="Mese successivo">
+               <font>
+                  <Font size="16.0" />
+               </font></Button>
+            <TableView fx:id="tableViewRealtime" layoutX="171.0" layoutY="76.0" prefHeight="493.0" prefWidth="1040.0" stylesheets="@resources/css/timeline.css" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="171.0" AnchorPane.rightAnchor="171.0" AnchorPane.topAnchor="76.0">
+               <columns>
+                  <TableColumn fx:id="dayColumn" editable="false" prefWidth="75.0" sortable="false" text="Day" />
+                  <TableColumn fx:id="numCameraColumn" prefWidth="75.0" text="Num camera" />
+                  <TableColumn fx:id="numAdultiColumn" prefWidth="75.0" text="Num adulti" />
+                  <TableColumn fx:id="numBambiniColumn" prefWidth="75.0" text="Num bambini" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="cleaningPane" layoutX="16.0" layoutY="63.0" prefHeight="596.0" prefWidth="1382.0" visible="false" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="53.0">
+         <children>
+            <SplitPane dividerPositions="0.33, 0.66" layoutX="14.0" layoutY="14.0" prefHeight="160.0" prefWidth="642.0" style="-fx-background-color: null;" stylesheets="@resources/css/hideSplitPaneDivider.css" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <AnchorPane layoutX="45.0" layoutY="18.0" prefHeight="123.0" prefWidth="353.0" style="-fx-background-color: #3065d9; -fx-background-radius: 20;" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="18.0">
+                           <children>
+                              <Label layoutX="17.0" layoutY="18.0" text="Stanze pulite" textFill="WHITE" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="59.0" AnchorPane.topAnchor="17.0">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="stanzePuliteLbl" layoutX="28.0" layoutY="55.0" text="0" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="55.0">
+                                 <font>
+                                    <Font name="System Bold" size="35.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="46.0" fitWidth="39.0" layoutX="253.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="16.0">
+                                 <image>
+                                    <Image url="@resources/icon/bath-towel.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <AnchorPane layoutX="44.0" layoutY="18.0" prefHeight="123.0" prefWidth="353.0" style="-fx-background-color: #d12c2c; -fx-background-radius: 20;" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="44.0" AnchorPane.topAnchor="18.0">
+                           <children>
+                              <Label layoutX="17.0" layoutY="18.0" text="Stanze da pulire" textFill="WHITE" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="59.0" AnchorPane.topAnchor="17.0">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="stanzeDaPulireLbl" layoutX="28.0" layoutY="55.0" text="0" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="55.0">
+                                 <font>
+                                    <Font name="System Bold" size="35.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="46.0" fitWidth="39.0" layoutX="253.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="16.0">
+                                 <image>
+                                    <Image url="@resources/icon/cleaning-cart.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <AnchorPane layoutX="52.0" layoutY="18.0" prefHeight="123.0" prefWidth="353.0" style="-fx-background-color: #e6bb12; -fx-background-radius: 20;" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="18.0">
+                           <children>
+                              <Label layoutX="17.0" layoutY="18.0" text="Stanze &quot;non disturbare&quot;" textFill="WHITE" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="59.0" AnchorPane.topAnchor="17.0">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="stanzeNonDisturbareLbl" layoutX="28.0" layoutY="55.0" text="0" textFill="WHITE" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="55.0">
+                                 <font>
+                                    <Font name="System Bold" size="35.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="46.0" fitWidth="39.0" layoutX="253.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="16.0">
+                                 <image>
+                                    <Image url="@resources/icon/do-not-disturb.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+            <AnchorPane layoutX="405.0" layoutY="213.0" prefHeight="249.0" prefWidth="574.0" style="-fx-background-color: #8BC34A; -fx-background-radius: 20;" AnchorPane.bottomAnchor="136.0" AnchorPane.leftAnchor="405.0" AnchorPane.rightAnchor="404.0" AnchorPane.topAnchor="213.0">
+               <children>
+                  <Label layoutX="22.0" layoutY="14.0" text="Modifica stanza" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="selezionaStanzaPulizia" layoutX="295.0" layoutY="87.0" onAction="#selezioneCameraDaModificarePulizia" prefHeight="41.0" prefWidth="180.0" />
+                  <Label layoutX="111.0" layoutY="89.0" text="Numero stanza" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <SplitPane dividerPositions="0.33, 0.66" layoutX="57.0" layoutY="175.0" prefHeight="61.0" prefWidth="460.0" style="-fx-background-color: null;" stylesheets="@resources/css/hideSplitPaneDivider.css" AnchorPane.leftAnchor="57.0" AnchorPane.rightAnchor="57.0" AnchorPane.topAnchor="175.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <Button fx:id="puliziaPulitaButton" layoutX="16.0" layoutY="9.0" mnemonicParsing="false" onAction="#updateCameraPulita" prefHeight="41.0" prefWidth="116.0" style="-fx-background-color: #3065d9;" text="Pulita" textFill="WHITE" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="9.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <Button fx:id="puliziaDaPulireButton" layoutX="16.0" layoutY="9.0" mnemonicParsing="false" onAction="#updateCameraDaPulire" prefHeight="41.0" prefWidth="116.0" style="-fx-background-color: #d12c2c;" text="Da pulire" textFill="WHITE" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="9.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <Button fx:id="puliziaNonDistButton" layoutX="16.0" layoutY="9.0" mnemonicParsing="false" onAction="#updateCameraNonDisturbare" prefHeight="41.0" prefWidth="116.0" style="-fx-background-color: #e6bb12;" text="Non dist." textFill="WHITE" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="9.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
